@@ -25,24 +25,20 @@ public class Driver {
 
             switch (browser) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
                     WebDriver chromeDriver = new ChromeDriver();
                     driverPool.set(chromeDriver);
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
                     break;
                 case "edge":
                     if (!System.getProperty("os.name").toLowerCase().contains("windows"))
                         throw new WebDriverException("Your OS doesn't support Edge");
-                    WebDriverManager.edgedriver().setup();
                     driverPool.set(new EdgeDriver());
                     break;
                 case "safari":
                     if (!System.getProperty("os.name").toLowerCase().contains("mac"))
                         throw new WebDriverException("Your OS doesn't support Safari");
-                    WebDriverManager.getInstance(SafariDriver.class).setup();
                     driverPool.set(new SafariDriver());
                     break;
             }

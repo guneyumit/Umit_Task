@@ -85,6 +85,7 @@ public class ConverterPage {
 
     public void goToPage() {
         driver().get("https://www.paysera.lt/v2/en-LT/fees/currency-conversion-calculator#/");
+        assertEquals(driver().getTitle(), "Online Currency Exchange | Currency Converter | Paysera");
     }
 
     public void enterValueInBuyOrSellInputBox(String boxName) {

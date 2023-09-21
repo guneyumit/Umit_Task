@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = "task/step_defs",
         stepNotifications = true,
         dryRun = false,
-        tags = "@wip"
+        tags = "@TC-2"
 )
 public class TestRunner {
 }
